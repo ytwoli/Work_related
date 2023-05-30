@@ -42,7 +42,15 @@ LLM combines models for classification, named entity recognition(NER), question-
 
 ### Prompt Templates
 To make constructing prompts with dynamic inputs easier, we can feed all the information into a prompt via template.
-*PromptTemplate* can train our model with instructions and context of the prompt and leave the question with {query}. With the help of *format* method, we can pass a *query* to the template.
+*PromptTemplate* can train our model with instructions and context of the prompt and leave the question with {query}. With the help of *format* method, we can pass a *query* to the template. There are essencially two distinct prompt templates available:
++ String Prompt Templates
+    provides a simple prompt in string formt.
+    Two Requirements:
+      * *input_variable*
+      * *a format method*, which takes in keyword arguments corresponding to the expected input_variables and returns the formatted prompt.
++ Chat Prompt Templates
+    produces a more structured prompt to be used with a chat API.
+
 
 ### Few Shot Prompt Templates
 With *FewShotPromptTemplate()*, we need parameters like: 
