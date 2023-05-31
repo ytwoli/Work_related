@@ -41,7 +41,7 @@ LLM combines models for classification, named entity recognition(NER), question-
   + **Output Indicator**: marks the beginning of the to-be-generated text.
 
 ### Prompt Templates
-To make constructing prompts with dynamic inputs easier, we can feed all the information into a prompt via template.
+To make constructing prompts with dynamic inputs easier, we can feed all the information into a prompt via template. PromptTemplates are responsible for constructing a prompt value. It can do things like formating, example selection and more. 
 *PromptTemplate* can train our model with instructions and context of the prompt and leave the question with {query}. With the help of *format* method, we can pass a *query* to the template. There are essencially two distinct prompt templates available:
 + String Prompt Templates
     provides a simple prompt in string formt.
