@@ -1,0 +1,6 @@
+project: breast_cancer
+registry: breast_cancer/data/registry.db
+provider: local
+online_store:
+    path: breast_cancer/data/registry.db
+entity_key_serialization_version: 2
